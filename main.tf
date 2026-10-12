@@ -165,7 +165,7 @@ resource "tfe_workspace_variable_set" "default" {
 ################################################################################
 
 resource "tfe_run_trigger" "default" {
-  for_each = toset(var.run_trigger_source_workspace_ids)
+  for_each = var.run_trigger_source_workspace_ids
 
   sourceable_id = each.value
   workspace_id  = tfe_workspace.default.id
