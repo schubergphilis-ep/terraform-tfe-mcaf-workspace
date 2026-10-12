@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.1.0](https://github.com/schubergphilis-ep/terraform-tfe-mcaf-workspace/compare/v3.0.1...v3.1.0) (2026-10-12)
+
+
+### 🚀 Features
+
+* add tfe_run_trigger support for source workspace IDs ([#2](https://github.com/schubergphilis-ep/terraform-tfe-mcaf-workspace/issues/2)) ([276c6fb](https://github.com/schubergphilis-ep/terraform-tfe-mcaf-workspace/commit/276c6fba7d4bb4554c2500eeaa0f04eb2176bf00))
+
 ## [3.0.1](https://github.com/schubergphilis-ep/terraform-tfe-mcaf-workspace/compare/v3.0.0...v3.0.1) (2026-02-09)
 
 
@@ -148,4 +155,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.1](https://github.com/schubergphilis-ep/terraform-tfe-mcaf-workspace/compare/v0.1.0...v0.1.1) (2020-07-20)
 
 ## 0.1.0 (2020-02-20)
-
