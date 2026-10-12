@@ -245,3 +245,27 @@ run "set_repository_identifier_custom_working_directory_and_recursive_patterns" 
     error_message = "Expected working_directory to be \"infra\""
   }
 }
+
+run "run_triggers" {
+  command = plan
+
+  module {
+    source = "./"
+  }
+
+  variables {
+    name                             = "run-trigger-workspace-${run.setup.random_string}"
+    terraform_organization           = "my-test-org"
+    run_trigger_source_workspace_ids = ["ws-source1", "ws-source2"]
+  }
+
+  assert {
+    condition     = length(tfe_run_trigger.default) == 2
+    error_message = "Expected 2 run triggers to be created"
+  }
+
+  assert {
+    condition     = tfe_run_trigger.default["ws-source1"].sourceable_id == "ws-source1"
+    error_message = "Expected run trigger sourceable_id to be \"ws-source1\""
+  }
+}
