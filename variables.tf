@@ -170,6 +170,13 @@ variable "repository_identifier" {
   description = "The repository identifier to connect the workspace to"
 }
 
+variable "run_trigger_source_workspace_ids" {
+  type        = set(string)
+  default     = []
+  description = "List of workspace IDs that, when applied successfully, will trigger a run in this workspace"
+  nullable    = false
+}
+
 variable "sensitive_env_variables" {
   type        = map(string)
   default     = {}
